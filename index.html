@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Read and Roll 中文词汇作业纸下载" />
+    <title>中文词汇 · Read and Roll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260910-home-bilingual-v1" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="Read and Roll 首页">
+          <span class="brand-cn">中文词汇<small>Chinese Vocabulary</small></span>
+          <span class="brand-rule" aria-hidden="true"></span>
+          <span class="brand-en">Read <i>and</i> Roll</span>
+        </a>
+        <p class="header-note">Printable vocabulary sheets</p>
+      </header>
+
+      <section class="library" id="home" aria-labelledby="library-title">
+        <div class="library-intro">
+          <p class="eyebrow">WORKSHEET LIBRARY</p>
+          <h1 id="library-title">选择一张，掷骰子，读中文。<small>Choose a sheet, roll the dice, and read Chinese.</small></h1>
+          <p>每张作业纸都可直接下载和打印。<small>Every worksheet is ready to download and print.</small></p>
+        </div>
+        <div class="worksheet-modules" id="worksheet-modules" aria-live="polite"></div>
+      </section>
+
+      <section class="detail" id="detail" hidden aria-labelledby="detail-title">
+        <button class="back-button" id="back-button" type="button">← 返回全部作业纸</button>
+        <div class="detail-layout">
+          <section class="worksheet-detail-panel" aria-label="Roll and Read 作业纸详情">
+            <div class="worksheet-frame">
+              <img id="detail-image" alt="" />
+            </div>
+            <div class="detail-copy">
+            <p class="eyebrow">ROLL AND READ</p>
+            <h1 id="detail-title"></h1>
+            <p id="detail-description" class="detail-description"></p>
+            <div class="detail-actions" aria-label="作业纸操作">
+              <button id="download-button" class="download-button" type="button">
+                下载 PNG
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v3h16v-3" /></svg>
+              </button>
+              <button id="print-button" class="print-button" type="button" aria-label="打印作业纸" title="打印作业纸">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M6 17H4V9.5C4 8.7 4.7 8 5.5 8h13c.8 0 1.5.7 1.5 1.5V17h-2M7 14h10v7H7zM17 11h.01" /></svg>
+                <span>打印</span>
+              </button>
+            </div>
+            <p class="print-note">PNG 格式 · Letter 作业纸 · 建议以实际大小打印</p>
+            </div>
+          </section>
+
+          <section class="vocabulary-panel" id="vocabulary-panel" hidden aria-labelledby="vocabulary-title">
+              <div class="vocabulary-head">
+                <div>
+                  <p class="eyebrow">LEARN THE WORDS</p>
+                  <h2 id="vocabulary-title">词语学习</h2>
+                </div>
+                <div class="vocabulary-controls">
+                  <button id="play-all-button" type="button">▶ 依次朗读</button>
+                  <button id="stop-speaking-button" type="button">停止</button>
+                </div>
+              </div>
+              <div class="vocabulary-grid" id="vocabulary-grid"></div>
+          </section>
+
+          <section class="practice-panel" id="practice-panel" hidden aria-labelledby="practice-title">
+              <div class="practice-head">
+                <div>
+                  <p class="eyebrow">EXTRA PRACTICE</p>
+                  <h2 id="practice-title">配套练习纸</h2>
+                </div>
+                <span>点击卡片进入详情页下载</span>
+              </div>
+              <div class="practice-grid" id="practice-grid"></div>
+          </section>
+
+          <section class="game-panel" id="game-panel" hidden aria-labelledby="game-title">
+            <div class="game-head">
+              <div>
+                <p class="eyebrow">MINI GAMES</p>
+                <h2 id="game-title">配套小游戏</h2>
+              </div>
+              <span>点击卡片开始游戏</span>
+            </div>
+            <div class="game-grid" id="game-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <footer>© 2026 Read and Roll · 为中文学习而设计 <small>Designed for Chinese learning</small></footer>
+    </main>
+    <script src="worksheet-assets.js?v=20260816-complete-images-v8"></script>
+    <script src="all-worksheet-details.js?v=20260910-all-sentence-detectives-v1"></script>
+    <script src="app.js?v=20260910-home-bilingual-v1"></script>
+  </body>
+</html>

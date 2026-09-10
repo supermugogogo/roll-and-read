@@ -1,0 +1,13 @@
+.agents/
+.codex/
+.openai/
+output/
+tmp/
+tools/
+/*.py
+/*.ps1
+/*.bat
+*.pyc
+__pycache__/
+Thumbs.db
+.DS_Store

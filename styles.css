@@ -1,0 +1,154 @@
+:root {
+  --ink: #182c4a;
+  --muted: #647083;
+  --cream: #fbf8f0;
+  --paper: #fffefa;
+  --line: #e9e3d6;
+  --blue: #7db6e7;
+  --yellow: #f5ca5b;
+  --coral: #e98269;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--cream); font-family: "Noto Sans SC", "DM Sans", sans-serif; }
+button, a { font: inherit; }
+a { color: inherit; }
+
+.site-shell { max-width: 1360px; min-height: 100vh; margin: 0 auto; padding: 0 42px; }
+.site-header { min-height: 112px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: baseline; gap: 13px; text-decoration: none; letter-spacing: -.03em; }
+.brand-cn { display: flex; flex-direction: column; font-size: 19px; font-weight: 700; line-height: 1.05; }
+.brand-cn small { margin-top: 4px; color: var(--muted); font: 500 9px/1.1 "DM Sans", sans-serif; letter-spacing: .03em; }
+.brand-rule { width: 1px; height: 20px; background: #cfc7b8; }
+.brand-en { font-family: "DM Sans", sans-serif; font-size: 25px; font-weight: 700; }
+.brand-en i { color: var(--coral); font-family: inherit; font-style: normal; font-weight: 400; }
+.header-note { color: var(--muted); font: 500 13px/1 "DM Sans", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+
+.library { padding: 66px 0 88px; }
+.library-intro { margin-bottom: 54px; }
+.eyebrow { margin: 0 0 12px; color: var(--coral); font: 700 11px/1 "DM Sans", sans-serif; letter-spacing: .16em; }
+h1 { max-width: 700px; margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.22; letter-spacing: -.055em; }
+h1 > small { display: block; max-width: 650px; margin-top: 10px; color: var(--muted); font: 500 clamp(13px, 1.45vw, 17px)/1.35 "DM Sans", sans-serif; letter-spacing: 0; }
+.library-intro > p:last-child { margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+.library-intro > p:last-child small { display: block; margin-top: 4px; font: 500 11px/1.4 "DM Sans", sans-serif; }
+.worksheet-modules { display: grid; gap: 31px; }
+.worksheet-module { width: calc(100% - clamp(32px, 6vw, 92px)); min-width: 0; margin: 0 auto; padding: 29px 29px 21px; border: 1px solid rgba(24, 44, 74, .06); border-radius: 13px; }
+.worksheet-module.tone-0 { background: #edf5fa; }
+.worksheet-module.tone-1 { background: #fbf2df; }
+.worksheet-module.tone-2 { background: #eef5e8; }
+.worksheet-module.tone-3 { background: #f9edf1; }
+.worksheet-module.tone-4 { background: #f1eef9; }
+.module-head { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 20px; }
+.module-head h2 { margin: 0; font-size: 23px; line-height: 1.25; letter-spacing: -.04em; }
+.module-head h2 small { display: block; margin-top: 3px; color: var(--muted); font: 600 10px/1.2 "DM Sans", sans-serif; letter-spacing: .03em; }
+.module-head p { margin: 0; color: var(--muted); font: 500 12px "DM Sans", "Noto Sans SC", sans-serif; letter-spacing: .05em; }
+.module-head p span, .module-head p small { display: block; text-align: right; }
+.module-head p small { margin-top: 2px; font-size: 9px; letter-spacing: .02em; }
+.card-track { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(180px, 18.2vw, 230px); gap: 19px; overflow-x: auto; padding: 2px 2px 14px; scrollbar-width: thin; scrollbar-color: #cfc7b8 transparent; scroll-snap-type: x proximity; }
+.card-track::-webkit-scrollbar { height: 7px; }
+.card-track::-webkit-scrollbar-thumb { border-radius: 4px; background: #d6cfc2; }
+.worksheet-card { min-width: 0; text-decoration: none; }
+.card-image { position: relative; overflow: hidden; aspect-ratio: .748; border: 1px solid #e6e0d4; border-radius: 4px; background: #f1eee7; box-shadow: 0 4px 10px rgba(42, 56, 72, .05); scroll-snap-align: start; transition: transform .25s ease, box-shadow .25s ease; }
+.card-image img { width: 100%; height: 100%; display: block; object-fit: contain; background: #fff; }
+.worksheet-card:hover .card-image, .worksheet-card:focus-visible .card-image { transform: translateY(-5px); box-shadow: 0 16px 28px rgba(42, 56, 72, .15); }
+.card-index { position: absolute; top: 11px; left: 11px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 100%; background: rgba(255, 254, 250, .92); color: var(--ink); font: 700 11px "DM Sans", sans-serif; }
+.card-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding-top: 13px; }
+.card-title { min-width: 0; font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
+.card-title span, .card-title small, .card-action span, .card-action small { display: block; }
+.card-title small { overflow: hidden; margin-top: 3px; color: var(--muted); font: 500 10px/1.25 "DM Sans", sans-serif; letter-spacing: 0; text-overflow: ellipsis; white-space: nowrap; }
+.card-action { color: var(--coral); font: 700 12px "DM Sans", sans-serif; text-align: right; white-space: nowrap; }
+.card-action small { margin-top: 2px; font-size: 9px; }
+
+.detail { padding: 46px 0 88px; }
+.back-button { padding: 0; border: 0; color: var(--muted); background: transparent; cursor: pointer; font-size: 14px; }
+.back-button:hover { color: var(--ink); }
+.detail-layout { display: flex; flex-direction: column; gap: 42px; padding-top: 38px; }
+.worksheet-detail-panel { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr); gap: clamp(42px, 7vw, 104px); align-items: center; }
+.worksheet-frame { display: grid; place-items: center; justify-self: center; width: min(100%, calc(78vh * 0.7071)); aspect-ratio: 210 / 297; overflow: hidden; border: 1px solid #e2dbcf; border-radius: 10px; background: #fff; box-shadow: 0 16px 35px rgba(39, 52, 65, .11); }
+.worksheet-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.practice-detail { padding-bottom: 30px; }
+.practice-detail .detail-layout { padding-top: 18px; }
+.practice-detail .worksheet-detail-panel { grid-template-columns: minmax(300px, 460px) minmax(280px, 420px); justify-content: center; gap: 42px; align-items: center; }
+.practice-detail .worksheet-frame { max-height: calc(100vh - 150px); }
+.practice-detail .worksheet-frame img { width: 100%; max-height: calc(100vh - 150px); object-fit: contain; }
+.practice-detail .detail-copy h1 { font-size: 32px; }
+.practice-detail .detail-description { margin: 12px 0 20px; line-height: 1.65; }
+.detail-copy h1 { font-size: clamp(32px, 4vw, 47px); }
+.detail-description { max-width: 390px; margin: 17px 0 29px; color: var(--muted); font-size: 16px; line-height: 1.9; }
+.detail-actions { display: flex; align-items: stretch; gap: 10px; }
+.download-button { display: inline-flex; align-items: center; gap: 13px; padding: 15px 19px 15px 21px; border: 0; border-radius: 5px; background: var(--ink); color: #fff; cursor: pointer; font-weight: 700; transition: background .2s, transform .2s; }
+.download-button:hover { background: #274771; transform: translateY(-2px); }
+.download-button svg, .print-button svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.download-button svg { color: var(--yellow); }
+.print-button { display: inline-flex; align-items: center; gap: 8px; padding: 0 17px; border: 1px solid #cfd6de; border-radius: 5px; color: var(--ink); background: var(--paper); cursor: pointer; font-weight: 700; transition: border-color .2s, background .2s, transform .2s; }
+.print-button:hover { border-color: var(--ink); background: #fff; transform: translateY(-2px); }
+.print-note { margin: 14px 0 0; color: #8a94a1; font-size: 12px; }
+.vocabulary-panel { margin: 0; padding: 28px; border: 1px solid #dce7ef; border-radius: 10px; background: #f1f7fb; }
+.vocabulary-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+.vocabulary-head h2 { margin: 0; font-size: 21px; letter-spacing: -.03em; }
+.vocabulary-controls { display: flex; flex-wrap: wrap; gap: 7px; }
+.vocabulary-controls button { padding: 7px 10px; border: 1px solid #cbd9e4; border-radius: 5px; color: var(--ink); background: #fff; cursor: pointer; font-size: 12px; }
+.vocabulary-controls button:hover { border-color: var(--ink); }
+.vocabulary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.word-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; min-width: 0; padding: 12px; border: 1px solid #d8e3eb; border-radius: 7px; color: var(--ink); background: #fff; cursor: pointer; text-align: left; transition: border-color .2s, background .2s, transform .2s; }
+.word-card:hover { border-color: var(--blue); transform: translateY(-1px); }
+.word-card.is-speaking { border-color: var(--coral); background: #fff7f4; }
+.word-hanzi { font-size: 25px; font-weight: 700; }
+.word-copy { min-width: 0; }
+.word-pinyin { display: block; color: var(--coral); font: 700 12px/1.3 "DM Sans", sans-serif; }
+.word-meaning { display: block; overflow: hidden; margin-top: 3px; color: var(--muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.word-speaker { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: var(--ink); background: #edf5fa; font-size: 14px; }
+.practice-panel { margin: 0; padding: 28px; border: 1px solid #eadfd5; border-radius: 10px; background: #fff9f5; }
+.practice-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
+.practice-head h2 { margin: 0; font-size: 21px; letter-spacing: -.03em; }
+.practice-head > span { color: var(--muted); font-size: 11px; }
+.practice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 175px)); gap: 14px; justify-content: start; }
+.practice-card { display: block; min-width: 0; overflow: hidden; padding: 0; border: 1px solid #ddd8ce; border-radius: 8px; color: var(--ink); background: #fff; cursor: pointer; text-align: left; text-decoration: none; box-shadow: 0 4px 12px rgba(42, 56, 72, .06); transition: transform .2s, box-shadow .2s, border-color .2s; }
+.practice-card:hover { border-color: var(--coral); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(42, 56, 72, .12); }
+.practice-card img { display: block; width: 100%; aspect-ratio: .73; object-fit: cover; object-position: top; background: #f4f2ec; }
+.practice-card-copy { display: block; padding: 11px 12px 12px; }
+.practice-card-title { display: block; font-size: 14px; font-weight: 700; }
+.practice-card-action { display: flex; justify-content: space-between; gap: 7px; margin-top: 4px; color: var(--coral); font-size: 10px; font-weight: 700; }
+.practice-card.is-downloading { opacity: .65; pointer-events: none; }
+.game-panel { padding: 28px; border: 1px solid #e2e0c8; border-radius: 10px; background: #fffdf0; }
+.game-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+.game-head h2 { margin: 0; font-size: 21px; letter-spacing: -.03em; }
+.game-head > span { color: var(--muted); font-size: 11px; }
+.game-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.game-card { display: block; overflow: hidden; border: 1px solid #e4dfbd; border-radius: 9px; color: var(--ink); background: #fff; text-decoration: none; }
+.game-card.is-ready { border-color: #efb66a; box-shadow: 0 5px 14px rgba(55, 62, 32, .08); transition: transform .2s, box-shadow .2s; }
+.game-card.is-ready:hover { transform: translateY(-2px); box-shadow: 0 9px 19px rgba(55, 62, 32, .13); }
+.game-preview { position: relative; display: block; overflow: hidden; aspect-ratio: 1000 / 620; border-bottom: 1px solid #ece4c9; background: #f7f3e6; pointer-events: none; }
+.game-preview iframe { position: absolute; top: 0; left: 0; width: 344.83%; height: 344.83%; border: 0; transform: scale(.29); transform-origin: top left; pointer-events: none; }
+.game-card-copy { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 15px; }
+.game-card strong { font-size: 14px; }
+.game-card-copy > span { color: var(--coral); font-size: 11px; font-weight: 700; }
+footer { padding: 22px 0 29px; border-top: 1px solid var(--line); color: #8a94a1; font-size: 12px; text-align: center; }
+footer small { display: block; margin-top: 4px; font: 500 9px/1.2 "DM Sans", sans-serif; }
+
+@media (max-width: 920px) { .worksheet-detail-panel, .practice-detail .worksheet-detail-panel { grid-template-columns: 1fr; } .detail-copy { max-width: 620px; } .practice-detail .worksheet-frame { max-width: 520px; } .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .site-shell { padding: 0 20px; } .site-header { min-height: 84px; } .header-note { display: none; } .brand-cn { font-size: 16px; } .brand-en { font-size: 20px; } .library { padding: 46px 0 56px; } .library-intro { margin-bottom: 42px; } .worksheet-modules { gap: 24px; } .worksheet-module { width: 100%; padding: 22px 17px 15px; border-radius: 10px; } .module-head h2 { font-size: 20px; } .card-track { grid-auto-columns: minmax(166px, 67vw); gap: 14px; margin-right: -17px; padding-right: 17px; } .card-title { font-size: 14px; } .detail { padding-top: 28px; } .detail-layout { gap: 30px; padding-top: 28px; } .vocabulary-panel, .practice-panel, .game-panel { padding: 18px; } .vocabulary-head, .practice-head, .game-head { align-items: flex-start; flex-direction: column; } .vocabulary-grid { grid-template-columns: 1fr; } .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .game-grid { grid-template-columns: 1fr; } }
+
+@media (min-width: 380px) and (max-width: 620px) and (min-height: 500px) {
+  .practice-detail { padding-top: 8px; padding-bottom: 8px; }
+  .practice-detail .back-button { font-size: 11px; }
+  .practice-detail .detail-layout { gap: 10px; padding-top: 8px; }
+  .practice-detail .worksheet-detail-panel { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+  .practice-detail .worksheet-frame { width: auto; max-width: 100%; height: 42vh; margin: 0 auto; box-shadow: 0 7px 18px rgba(39,52,65,.1); }
+  .practice-detail .worksheet-frame img { width: auto; height: 42vh; max-height: 42vh; }
+  .practice-detail .detail-copy { max-width: none; }
+  .practice-detail .detail-copy .eyebrow { display: none; }
+  .practice-detail .detail-copy h1 { margin: 0; font-size: 21px; }
+  .practice-detail .detail-description { margin: 5px 0 8px; font-size: 11px; line-height: 1.35; }
+  .practice-detail .detail-actions { gap: 6px; }
+  .practice-detail .download-button, .practice-detail .print-button { min-height: 34px; padding: 7px 10px; font-size: 11px; }
+  .practice-detail .print-note { margin: 5px 0 0; font-size: 9px; }
+}
+
+@media print {
+  body { background: #fff; }
+  .site-header, .back-button, .detail-copy, footer { display: none !important; }
+  .site-shell, .detail, .detail-layout, .worksheet-frame { display: block; width: 100%; max-width: none; aspect-ratio: auto; margin: 0; padding: 0; border: 0; box-shadow: none; }
+  .worksheet-frame img { display: block; width: 100%; height: auto; }
+}
