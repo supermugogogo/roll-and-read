@@ -1,5 +1,5 @@
 /* Shared compact desktop layout for all Read and Roll mini games. */
-@media (min-width: 380px) and (min-height: 500px) {
+@media (min-width: 721px) and (min-height: 500px) {
   html, body { height: 100%; overflow: hidden; }
   .shell { width: min(900px, calc(100% - 28px)) !important; height: 100vh; padding: 10px 0 12px !important; display: flex; flex-direction: column; }
   .top { flex: 0 0 auto; }
@@ -51,7 +51,7 @@
 }
 
 /* Codex right-side canvas and other narrow desktop previews. */
-@media (min-width: 380px) and (max-width: 720px) and (min-height: 500px) {
+@media (min-width: 721px) and (max-width: 920px) and (min-height: 500px) {
   .shell { width: calc(100% - 12px) !important; padding: 5px 0 7px !important; }
   .top { font-size: 10px; }
   .badge { padding: 4px 6px !important; font-size: 9px !important; }
@@ -91,4 +91,43 @@
   .basket { min-height: 82px !important; padding: 6px 3px !important; }
   .basket-label { min-height: 48px !important; font-size: 10px !important; }
   .basket-label img { height: 42px !important; }
+}
+
+/* Phones must show the full game and keep normal vertical scrolling. */
+@media (max-width: 720px) {
+  html, body {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: auto;
+  }
+
+  body { position: static !important; }
+
+  .shell {
+    width: min(100% - 20px, 680px) !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    margin: 0 auto !important;
+    padding: 12px 0 36px !important;
+    overflow: visible !important;
+  }
+
+  .game {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .stage {
+    height: min(68vh, 620px) !important;
+    min-height: 430px !important;
+  }
+
+  .modal {
+    position: fixed !important;
+    overflow-y: auto !important;
+  }
 }

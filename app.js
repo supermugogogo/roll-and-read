@@ -94,7 +94,7 @@ let speakingSequence = 0;
 let backTarget = "home";
 
 // Version local worksheet and game assets so browsers do not reuse stale previews.
-const ASSET_VERSION = "20260910-mobile-direct-print-v2";
+const ASSET_VERSION = "20260910-mobile-games-scroll-v1";
 const source = (file) => {
   const encoded = encodeURI(file);
   return `${encoded}${encoded.includes("?") ? "&" : "?"}v=${ASSET_VERSION}`;
