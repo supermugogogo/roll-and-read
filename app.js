@@ -94,7 +94,7 @@ let speakingSequence = 0;
 let backTarget = "home";
 
 // Version local worksheet and game assets so browsers do not reuse stale previews.
-const ASSET_VERSION = "20260910-home-bilingual-v1";
+const ASSET_VERSION = "20260910-mobile-layout-print-v1";
 const source = (file) => {
   const encoded = encodeURI(file);
   return `${encoded}${encoded.includes("?") ? "&" : "?"}v=${ASSET_VERSION}`;
@@ -284,9 +284,9 @@ function printWorksheet() {
   if (!activeSheet) return;
   const printWindow = window.open("", "_blank");
   if (!printWindow) return;
-  const imageSource = source(activeSheet.file);
+  const imageSource = new URL(source(activeSheet.file), document.baseURI).href;
   const pageTitle = `${activeSheet.title} · Read and Roll`;
-  printWindow.document.write(`<!doctype html><html lang="zh-CN"><head><title>${pageTitle}</title><style>@page{size:auto;margin:0}html,body{margin:0;background:#fff}img{display:block;width:100%;height:auto}</style></head><body><img src="${imageSource}" alt="${activeSheet.title}" onload="window.print()"></body></html>`);
+  printWindow.document.write(`<!doctype html><html lang="zh-CN"><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>${pageTitle}</title><style>@page{size:letter portrait;margin:0}html,body{width:100%;margin:0;background:#fff}img{display:block;width:100%;height:auto;max-width:none}</style></head><body><img src="${imageSource}" alt="${activeSheet.title}" onload="setTimeout(()=>window.print(),150)" onerror="document.body.textContent='图片加载失败，请返回后重试。'"></body></html>`);
   printWindow.document.close();
 }
 
