@@ -147,8 +147,13 @@ footer small { display: block; margin-top: 4px; font: 500 9px/1.2 "DM Sans", san
 }
 
 @media print {
+  @page { size: letter portrait; margin: 0; }
   body { background: #fff; }
-  .site-header, .back-button, .detail-copy, footer { display: none !important; }
+  body.is-printing .site-header, body.is-printing .back-button, body.is-printing .detail-copy, body.is-printing .vocabulary-panel, body.is-printing .practice-panel, body.is-printing .game-panel, body.is-printing footer { display: none !important; }
+  body.is-printing .library { display: none !important; }
+  body.is-printing .detail { display: block !important; }
   .site-shell, .detail, .detail-layout, .worksheet-frame { display: block; width: 100%; max-width: none; aspect-ratio: auto; margin: 0; padding: 0; border: 0; box-shadow: none; }
-  .worksheet-frame img { display: block; width: 100%; height: auto; }
+  .worksheet-detail-panel { display: block; }
+  .worksheet-frame { overflow: visible; border-radius: 0; }
+  .worksheet-frame img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
 }
