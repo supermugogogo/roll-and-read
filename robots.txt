@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supermugogogo.github.io/roll-and-read/sitemap.xml
+
