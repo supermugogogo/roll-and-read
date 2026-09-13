@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://supermugogogo.github.io/roll-and-read/sitemap.xml
-
+Sitemap: https://supermugogogo.github.io/roll-and-read/sitemap.txt
