@@ -70,7 +70,7 @@ for (const [index, item] of data.entries()) {
 <link rel="stylesheet" href="../../topic.css?v=20260912-topics-v1">
 <script type="application/ld+json">${JSON.stringify(schema).replaceAll("</","<\\/")}</script>
 </head><body>
-<header class="site-head"><a href="../../">中文词汇 <span>Read and Roll</span></a><nav><a href="../../">全部课程 All lessons</a></nav></header>
+<header class="site-head"><a href="../../">中文词汇 <span>Roll and Read</span></a><nav><a href="../../">全部课程 All lessons</a></nav></header>
 <main>
 <nav class="crumb" aria-label="面包屑"><a href="../../">首页 Home</a><span>›</span><span>${esc(group)}</span><span>›</span><span>${esc(zh)}</span></nav>
 <section class="hero"><div class="hero-copy"><p class="eyebrow">FREE PRINTABLE CHINESE LEARNING RESOURCES</p><h1>${esc(zh)}<small>${esc(en)}</small></h1><p>${esc(item.description)}</p><p class="english">Learn beginner Mandarin vocabulary through a printable Roll and Read worksheet, three companion activities, and four interactive games.</p><div class="actions"><a class="primary" href="../../#sheet-${index}">查看完整课程 View lesson</a><a href="${href(item.file)}">打开主作业纸 Open worksheet</a></div></div><figure><img src="${href(item.file)}" alt="${esc(zh)} Roll and Read 儿童中文词汇作业纸"><figcaption>Letter尺寸可打印中文词汇作业纸 · Letter-size printable Mandarin worksheet</figcaption></figure></section>
@@ -78,7 +78,7 @@ for (const [index, item] of data.entries()) {
 <section class="section"><p class="eyebrow">PRINTABLE PRACTICE</p><h2>配套练习纸 <small>Companion worksheets</small></h2><div class="practice-grid">${practice}</div></section>
 <section class="section"><p class="eyebrow">INTERACTIVE GAMES</p><h2>配套小游戏 <small>Interactive Chinese games</small></h2><div class="game-grid">${games}</div></section>
 <section class="teacher-note"><h2>适合怎样使用？ <small>How to use</small></h2><p>适合中文初学者、海外儿童中文课堂、家庭学习和复习。先用主作业纸朗读词汇，再完成剪贴、选词和描红练习，最后用小游戏巩固。</p><p>Designed for beginner Mandarin learners, heritage-language families, homeschool practice, and elementary Chinese classrooms.</p></section>
-</main><footer>© 2026 Read and Roll · Free Chinese learning resources</footer>
+</main><footer>© 2026 Roll and Read · Free Chinese learning resources</footer>
 </body></html>`;
   const dir = path.join(root,"topics",slug);
   fs.mkdirSync(dir,{recursive:true});

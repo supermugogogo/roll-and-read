@@ -1,4 +1,4 @@
-/* Shared compact desktop layout for all Read and Roll mini games. */
+/* Shared compact desktop layout for all Roll and Read mini games. */
 @media (min-width: 721px) and (min-height: 500px) {
   html, body { height: 100%; overflow: hidden; }
   .shell { width: min(900px, calc(100% - 28px)) !important; height: 100vh; padding: 10px 0 12px !important; display: flex; flex-direction: column; }

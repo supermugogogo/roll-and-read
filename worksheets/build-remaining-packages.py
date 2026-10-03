@@ -45,7 +45,7 @@ def make_games(folder,title,index,entries):
  qs_js='const questions='+json.dumps(qs,ensure_ascii=False,separators=(',',':'))+';'
  specs=[('dice-adventure.html','dice.html',title+'骰子闯关','spaces',spaces_js),('listening-choice.html','listen.html',title+'听音选词','words',words),('sentence-builder.html','sentence.html',title+'看图造句','questions',qs_js),('pinyin-match.html','catch.html',title+'汉字接接乐','words',words)]
  for srcname,outname,heading,kind,data in specs:
-  text=(templates/srcname).read_text(encoding='utf-8'); text=text.replace('../../index.html#sheet-0',f'../../index.html#sheet-{index}'); text=re.sub(r'<title>.*?</title>',f'<title>{heading} · Read and Roll</title>',text,1); text=re.sub(r'<h1>.*?</h1>',f'<h1>{heading}</h1>',text,1)
+  text=(templates/srcname).read_text(encoding='utf-8'); text=text.replace('../../index.html#sheet-0',f'../../index.html#sheet-{index}'); text=re.sub(r'<title>.*?</title>',f'<title>{heading} · Roll and Read</title>',text,1); text=re.sub(r'<h1>.*?</h1>',f'<h1>{heading}</h1>',text,1)
   pattern={'words':r'const words=\[.*?\n    \];','spaces':r'const spaces=\[.*?\n    \];','questions':r'const questions=\[.*?\n    \];'}[kind]; text=re.sub(pattern,data,text,1,flags=re.S); (folder/outname).write_text(text,encoding='utf-8')
 
 detail=[]

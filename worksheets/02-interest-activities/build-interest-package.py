@@ -84,7 +84,7 @@ word_js="""const words=[
 
 def make(template_name,out_name,title,heading,replacement_kind,replacement):
     text=(SITE/"worksheets"/"01-daily-activities"/template_name).read_text(encoding="utf-8")
-    text=re.sub(r"<title>.*?</title>",f"<title>{title} · Read and Roll</title>",text,1)
+    text=re.sub(r"<title>.*?</title>",f"<title>{title} · Roll and Read</title>",text,1)
     text=text.replace("../../index.html#sheet-0","../../index.html#sheet-1")
     if replacement_kind=="words": text=re.sub(r"const words=\[.*?\n    \];",replacement,text,1,flags=re.S)
     elif replacement_kind=="spaces": text=re.sub(r"const spaces=\[.*?\n    \];",replacement,text,1,flags=re.S)

@@ -18,4 +18,4 @@ for index, name in enumerate(names):
     icon = source.crop((x0 + 12, y0 + 8, min(x0 + 153, source.width), y0 + 138))
     icon.save(output / f"{name}.png", optimize=True)
 
-print(f"Exported {len(names)} Read and Roll game icons.")
+print(f"Exported {len(names)} Roll and Read game icons.")

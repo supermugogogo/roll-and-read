@@ -1,4 +1,4 @@
-# Read and Roll 初学者句子排序游戏规范
+# Roll and Read 初学者句子排序游戏规范
 
 ## 核心原则
 
